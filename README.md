@@ -22,27 +22,32 @@ Predictive maintenance helps reduce downtime by forecasting failures before they
 ---
 
 ## 📁 Project Structure
-
-predictive-maintenance/
-├── app.py # Flask app
-├── streamlit_app.py # Streamlit dashboard
-├── model/
-│ └── xgb_pipeline_model.pkl
-├── templates/
-│ └── index.html
-├── static/
-│ └── style.css
+```
+predictive-maintenance-project/
+├── predictive_maintenance_Web_App # Flask app
+  ├── app.py
+  ├── templates/
+    ├── index.html
+  ├── model/
+    │ └── xgb_pipeline_model.pkl
+  ├── requirement.txt
+  ├── README.md
+  ├── Procfile
+├── predictive_maintenance_dashboard # Streamlit dashboard
+  ├── app.py
+  ├── utils/
+    ├── helper.py
+  ├── model/
+    │ └── xgb_pipeline_model.pkl
+  ├── requirement.txt
+  ├── README.md
 ├── requirements.txt
-├── Procfile
 ├── .gitignore
 ├── README.md
 └── LICENSE
+```
 
-yaml
-Copy
-Edit
 
----
 
 ## 🚦 How to Run Locally
 
