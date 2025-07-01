@@ -1,16 +1,16 @@
-# 🛠 Predictive Maintenance Dashboard (Streamlit)
+# 🔧 Predictive Maintenance Web App (Flask)
 
-This interactive dashboard allows users to input real-time machine data and get instant predictions on whether a tool failure is likely to occur. The model is trained using XGBoost and wrapped inside a preprocessing pipeline for production readiness.
+This web application allows users to input machine metrics through a user-friendly form and receive predictions about potential tool failures. The backend is powered by a trained machine learning pipeline using XGBoost, deployed using Flask.
 
 ---
 
 ## 🚀 Features
 
-- 📊 Real-time prediction using a trained ML pipeline
-- 🎛️ Interactive UI with sliders and dropdowns
-- 📈 Display of classification performance (Confusion Matrix & Classification Report)
-- 📦 Uses a serialized model pipeline (`xgb_pipeline_model.pkl`)
-- Built with **Streamlit**
+- 🧠 Predicts whether a machine is likely to fail based on input parameters
+- 📝 Form-based UI with dropdowns and numeric inputs
+- 🔒 Built using Flask for lightweight backend deployment
+- 📦 Uses a saved `xgb_pipeline_model.pkl` pipeline
+- HTML + CSS interface for a clean UI
 
 ---
 
@@ -27,13 +27,13 @@ This interactive dashboard allows users to input real-time machine data and get 
 
 ---
 
-## 📦 How to Run the Dashboard Locally
+## 📦 How to Run the Flask App Locally
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/predictive-maintenance.git
-   cd predictive-maintenance/dashboard
-Create a virtual environment (optional but recommended)
+   cd predictive-maintenance/webapp
+Create a virtual environment (recommended)
 
 ```bash
 python -m venv venv
@@ -42,57 +42,46 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
-Run the app
+Run the Flask server
 
 ```bash
-streamlit run app.py
+python app.py
+Open in your browser
+Visit http://127.0.0.1:5000
+```
+
 ```
 🗂 Folder Structure
 ```text
-dashboard/
+predictive_maintenance_Web_App/
 │
-├── app.py                     # Streamlit app
-├── xgb_pipeline_model.pkl     # Trained pipeline model
-├── requirements.txt           # Streamlit + ML libraries
-└── README.md                  # You're here!
+├── templates/
+│   └── index.html            # Main form and result display
+├── app.py                # Main Flask application
+├── model
+   ├── xgb_pipeline_model.pkl    # Trained pipeline model
+├── requirements.txt
+├── procfile
+└── README.md                 # You're here!
 ```
-📊 Example Output
-✅ Prediction: Failure / No Failure
+⚠️ Notes
+Input field names must match the model’s expected feature names.
 
-🧾 Confusion Matrix
+Make sure the model file is a full pipeline (encoder + model) or the app will throw an error.
 
-🧾 Classification Report (Precision, Recall, F1-score)
+The form uses the POST method to send input values to the server for prediction.
 
-⚙️ Notes
-Ensure the model pipeline includes all preprocessing (like Label Encoding).
+✅ Prediction Output
+Failure: Model predicts tool failure.
 
-Input feature names in your app must match what the model expects.
+No Failure: Model predicts machine is running normally.
 
-The prediction results are based on a binary classification:
-
-1: Failure
-
-0: No Failure
-
-🧠 Model Info
-Model Used: XGBoost Classifier
-
-Performance:
-
-Accuracy: ~98%
-
-Recall for Failures: ~81%
-
-F1-Score for Failures: ~72%
-
-Problem Type: Binary Classification
-
-👩‍💻 Author
+👨‍💻 Author
 Durdana Khalid
 Data Science Portfolio Project
 GitHub: @DurdanaKhalid49
 
 📜 License
-Distributed under the MIT License. See LICENSE in the root directory for more information.
+Distributed under the MIT License. See LICENSE in the root folder.
