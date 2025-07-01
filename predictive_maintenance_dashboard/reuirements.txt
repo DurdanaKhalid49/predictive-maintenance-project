@@ -4,3 +4,5 @@ joblib
 pandas
 matplotlib
 seaborn
+pickle
+joblib
