@@ -13,6 +13,4 @@ venv/
 # VSCode
 .vscode/
 
-# Model files
-*.pkl
 
