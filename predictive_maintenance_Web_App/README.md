@@ -49,3 +49,50 @@ Run the app
 ```bash
 streamlit run app.py
 ```
+🗂 Folder Structure
+```text
+dashboard/
+│
+├── app.py                     # Streamlit app
+├── xgb_pipeline_model.pkl     # Trained pipeline model
+├── requirements.txt           # Streamlit + ML libraries
+└── README.md                  # You're here!
+```
+📊 Example Output
+✅ Prediction: Failure / No Failure
+
+🧾 Confusion Matrix
+
+🧾 Classification Report (Precision, Recall, F1-score)
+
+⚙️ Notes
+Ensure the model pipeline includes all preprocessing (like Label Encoding).
+
+Input feature names in your app must match what the model expects.
+
+The prediction results are based on a binary classification:
+
+1: Failure
+
+0: No Failure
+
+🧠 Model Info
+Model Used: XGBoost Classifier
+
+Performance:
+
+Accuracy: ~98%
+
+Recall for Failures: ~81%
+
+F1-Score for Failures: ~72%
+
+Problem Type: Binary Classification
+
+👩‍💻 Author
+Durdana Khalid
+Data Science Portfolio Project
+GitHub: @DurdanaKhalid49
+
+📜 License
+Distributed under the MIT License. See LICENSE in the root directory for more information.
