@@ -4,5 +4,5 @@ numpy
 xgboost
 joblib
 scikit-learn
-matplotlib
+matplotlib.pyplot
 seaborn
