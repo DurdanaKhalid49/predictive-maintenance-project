@@ -54,21 +54,15 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 ```
 📦 2. Install Dependencies
 ```bash
-Copy
-Edit
 pip install -r requirements.txt
 ```
 🌐 3. Run Flask App
 ```bash
-Copy
-Edit
 python app.py
 Visit http://localhost:5000
 ```
 📊 4. Run Streamlit Dashboard
-```bash
-Copy
-Edit
+```bash 
 streamlit run streamlit_app.py
 ```
 🌍 Deployment
