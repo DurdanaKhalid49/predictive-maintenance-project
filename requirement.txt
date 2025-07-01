@@ -5,25 +5,14 @@ pandas
 scikit-learn
 xgboost
 gunicorn
-✅ .gitignore
-gitignore
-Copy
-Edit
-# Python
-__pycache__/
-*.py[cod]
-*.ipynb_checkpoints
+streamlit
+pandas
+numpy
+xgboost
+joblib
+scikit-learn
+matplotlib
+seaborn
+pickle
 
-# Environment
-venv/
-.env
-
-# Mac/Linux
-.DS_Store
-
-# VSCode
-.vscode/
-
-# Model files
-*.pkl
 
