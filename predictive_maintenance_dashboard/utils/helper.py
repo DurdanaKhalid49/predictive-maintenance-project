@@ -7,7 +7,8 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix, classification_report
 
 def load_model(path):
-    return pickle.load(path)
+    with open(path, 'rb') as f:
+        return pickle.load(f)
 
 def plot_confusion_matrix(y_true, y_pred):
     cm = confusion_matrix(y_true, y_pred)
