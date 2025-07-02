@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Environment
+venv/
+.env
+
+# Mac/Linux
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Model files
+*.pkl
+
