@@ -1,9 +1,9 @@
 streamlit
 scikit-learn
 xgboost
+imbalanced-learn
 matplotlib
 seaborn
 pandas
 numpy
-joblib
-imblearn
+category_encoders
