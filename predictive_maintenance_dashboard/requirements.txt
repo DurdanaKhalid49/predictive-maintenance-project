@@ -1,9 +1,0 @@
-streamlit
-scikit-learn
-xgboost
-imbalanced-learn
-matplotlib
-seaborn
-pandas
-numpy
-category_encoders
