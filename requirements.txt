@@ -12,6 +12,7 @@ joblib
 scikit-learn
 matplotlib
 seaborn
-pickle
+category_encoded
+imbalanced-learn
 
 
