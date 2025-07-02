@@ -4,5 +4,6 @@ numpy
 xgboost
 joblib
 scikit-learn
-matplotlib.pyplot
+matplotlib
 seaborn
+pickle
