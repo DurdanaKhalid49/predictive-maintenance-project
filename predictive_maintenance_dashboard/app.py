@@ -8,7 +8,7 @@ st.set_page_config(page_title="Predictive Maintenance", layout="centered")
 st.title("🔧 Predictive Maintenance Dashboard")
 
 # Load Model
-model = load_model("model/xgb_pipeline_model.pkl")
+model = load_model("predictive_maintenance_dashboard/model/xgb_pipeline_model.pkl")
 
 st.sidebar.header("Enter Input Features")
 
