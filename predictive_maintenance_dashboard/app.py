@@ -46,7 +46,7 @@ st.subheader("📊 Model Performance (Test Set)")
 if st.checkbox("Show Confusion Matrix and Classification Report"):
     # Load your saved test set here if available
     try:
-        test_data = pd.read_csv("D:/Portfolio Projects/Predictive_Maintenance_Project/data/predictive_maintenance.csv")  # Optional, if you saved X_test, y_test
+        test_data = pd.read_csv("data/predictive_maintenance.csv")  # Optional, if you saved X_test, y_test
         X_test = test_data.drop(columns=["Target"])
         y_test = test_data["Target"]
         y_pred = model.predict(X_test)
