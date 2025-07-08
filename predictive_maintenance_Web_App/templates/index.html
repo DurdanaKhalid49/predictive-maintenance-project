@@ -1,8 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Predictive Maintenance</title>
     <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #2980b9;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f6391;
+        }
+
+        h3 {
+            text-align: center;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,22 +78,22 @@
                 <option value="L">L</option>
                 <option value="M">M</option>
                 <option value="H">H</option>
-            </select><br><br>
+            </select>
 
             <label>Air Temperature [K]:</label>
-            <input type="number" step="1" name="Air_temperature"><br><br>
+            <input type="number" step="1" name="Air_temperature" required>
 
             <label>Process Temperature [K]:</label>
-            <input type="number" step="1" name="Process_temperature"><br><br>
+            <input type="number" step="1" name="Process_temperature" required>
 
             <label>Rotational Speed [rpm]:</label>
-            <input type="number" step="1" name="Rotational_speed"><br><br>
+            <input type="number" step="1" name="Rotational_speed" required>
 
             <label>Torque [Nm]:</label>
-            <input type="number" step="1" name="Torque"><br><br>
+            <input type="number" step="1" name="Torque" required>
 
             <label>Tool Wear [min]:</label>
-            <input type="number" step="1" name="Tool_wear"><br><br>
+            <input type="number" step="1" name="Tool_wear" required>
 
             <input type="submit" value="Predict">
         </form>
