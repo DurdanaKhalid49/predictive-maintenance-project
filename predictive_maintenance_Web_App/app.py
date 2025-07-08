@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import pickle
+import joblib
 import pandas as pd
 import os
 
