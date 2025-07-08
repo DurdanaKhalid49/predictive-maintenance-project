@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 # Load saved pipeline model
-with open('model/xgb_pipeline_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+with open('model/xgb_pipeline_model.joblib', 'rb') as f:
+    model = joblib.load(f)
 # Home page with form
 @app.route('/')
 def home():
